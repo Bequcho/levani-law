@@ -1,0 +1,11 @@
+{
+  "name": "Levani Khelkhelauri — Attorney at Law",
+  "short_name": "Levani Law",
+  "start_url": "/levani-law/",
+  "display": "standalone",
+  "background_color": "#0e1012",
+  "theme_color": "#0e1012",
+  "icons": [
+    {"src": "assets/apple-touch-icon.png", "sizes": "180x180", "type": "image/png"}
+  ]
+}
