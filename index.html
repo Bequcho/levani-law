@@ -131,8 +131,17 @@
     }
     @media(max-width:640px){
       .wrap{width:min(100% - 28px,var(--max))}.section{padding:74px 0}.header-inner{height:76px}.brand-sub{display:none}.brand-name{font-size:1rem}
-      .langs .lang{padding:6px 5px}.hero{min-height:770px;align-items:flex-end}.hero-media img{object-position:50% 50%;transform:scale(1.03)}.hero-media:after{background:linear-gradient(180deg,rgba(10,12,14,.22),rgba(10,12,14,.56) 30%,rgba(10,12,14,.96) 74%,#0e1012)}
-      .hero-content{padding:130px 0 48px;margin-left:auto;margin-right:auto}.hero h1{font-size:clamp(2.7rem,14vw,4.5rem);margin-top:17px}.hero-lead{font-size:1rem}.hero-contact span.sep{display:none}.hero-contact{gap:12px;flex-direction:column;align-items:flex-start}
+      .langs .lang{padding:6px 5px}
+      .hero{min-height:auto;align-items:stretch}
+      .hero-media{inset:0 0 auto 0;height:560px}
+      .hero-media img{object-position:38% 44%;transform:none}
+      .hero-media:after{background:linear-gradient(180deg,rgba(10,12,14,.10) 0%,rgba(10,12,14,.20) 52%,rgba(10,12,14,.76) 80%,#0e1012 100%)}
+      .hero-content{padding:490px 0 48px;margin-left:auto;margin-right:auto;max-width:none}
+      .hero h1{font-size:clamp(2.55rem,12.5vw,3.35rem);line-height:1.03;margin-top:14px;max-width:100%;overflow-wrap:normal;word-break:normal}
+      html[lang="ru"] .hero h1{font-size:clamp(2.25rem,10.7vw,3rem);line-height:1.04;letter-spacing:-.03em}
+      html[lang="ka"] .hero h1{font-size:clamp(2rem,9.2vw,2.7rem);line-height:1.08;letter-spacing:-.015em}
+      .hero-lead{font-size:1rem;line-height:1.52;max-width:100%}
+      .hero-contact span.sep{display:none}.hero-contact{gap:12px;flex-direction:column;align-items:flex-start}
       .actions .btn{width:100%}.practice-grid,.audience-grid,.process-grid{grid-template-columns:1fr}.practice-card{min-height:0}.about-meta{grid-template-columns:1fr}.portrait{min-height:430px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-grid{align-items:flex-start;flex-direction:column}.footer-right{text-align:left}.toast{left:14px;right:14px;bottom:14px}
     }
   </style>
