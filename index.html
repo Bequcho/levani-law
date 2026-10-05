@@ -11,6 +11,10 @@
   <meta property="og:description" content="Professional legal assistance in civil, administrative and criminal law matters in Tbilisi, Georgia." />
   <meta property="og:type" content="website" />
   <link rel="canonical" href="https://levanilaw.ge/" />
+  <link rel="alternate" hreflang="ka" href="https://levanilaw.ge/ka/" />
+  <link rel="alternate" hreflang="ru" href="https://levanilaw.ge/ru/" />
+  <link rel="alternate" hreflang="en" href="https://levanilaw.ge/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://levanilaw.ge/" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
@@ -211,9 +215,9 @@
     <h2 class="section-title" data-i18n="practiceTitle">იურიდიული დახმარება კერძო პირებისა და ბიზნესისთვის</h2>
     <p class="section-copy" data-i18n="practiceLead">სამართლებრივი მხარდაჭერა პირველადი კონსულტაციიდან და საქმის ანალიზიდან კლიენტის ინტერესების წარმომადგენლობამდე და დაცვამდე.</p>
     <div class="practice-grid">
-      <article class="practice-card"><div class="num">01</div><h3 data-i18n="civilTitle">სამოქალაქო სამართალი</h3><p data-i18n="civilText">სამართლებრივი დახმარება სამოქალაქო-სამართლებრივ, ქონებრივ და სახელშეკრულებო საკითხებში, ასევე ფიზიკურ და იურიდიულ პირებს შორის წარმოშობილ დავებში.</p></article>
-      <article class="practice-card"><div class="num">02</div><h3 data-i18n="adminTitle">ადმინისტრაციული სამართალი</h3><p data-i18n="adminText">კონსულტაცია და სამართლებრივი მხარდაჭერა სახელმწიფო და ადმინისტრაციულ ორგანოებთან ურთიერთობისას, დოკუმენტების მომზადება და კლიენტის ინტერესების წარმომადგენლობა.</p></article>
-      <article class="practice-card"><div class="num">03</div><h3 data-i18n="criminalTitle">სისხლის სამართალი</h3><p data-i18n="criminalText">სამართლებრივი დახმარება სისხლის სამართლის საკითხებზე და კლიენტის უფლებებისა და კანონიერი ინტერესების დაცვა სისხლის სამართლის პროცესის ფარგლებში.</p></article>
+      <a class="practice-card service-link" data-service="civil" href="/ka/civil-law/"><div class="num">01</div><h3 data-i18n="civilTitle">სამოქალაქო სამართალი</h3><p data-i18n="civilText">სამართლებრივი დახმარება სამოქალაქო-სამართლებრივ, ქონებრივ და სახელშეკრულებო საკითხებში, ასევე ფიზიკურ და იურიდიულ პირებს შორის წარმოშობილ დავებში.</p></a>
+      <a class="practice-card service-link" data-service="admin" href="/ka/administrative-law/"><div class="num">02</div><h3 data-i18n="adminTitle">ადმინისტრაციული სამართალი</h3><p data-i18n="adminText">კონსულტაცია და სამართლებრივი მხარდაჭერა სახელმწიფო და ადმინისტრაციულ ორგანოებთან ურთიერთობისას, დოკუმენტების მომზადება და კლიენტის ინტერესების წარმომადგენლობა.</p></article>
+      <a class="practice-card service-link" data-service="criminal" href="/ka/criminal-law/"><div class="num">03</div><h3 data-i18n="criminalTitle">სისხლის სამართალი</h3><p data-i18n="criminalText">სამართლებრივი დახმარება სისხლის სამართლის საკითხებზე და კლიენტის უფლებებისა და კანონიერი ინტერესების დაცვა სისხლის სამართლის პროცესის ფარგლებში.</p></a>
     </div>
   </div>
 </section>
@@ -373,6 +377,8 @@ function applyLang(lang){
   document.querySelectorAll('[data-i18n]').forEach(el=>{const k=el.dataset.i18n;if(I18N[lang][k]) el.textContent=I18N[lang][k]});
   document.querySelectorAll('[data-i18n-option]').forEach(el=>{const k=el.dataset.i18nOption;if(I18N[lang][k]) el.textContent=I18N[lang][k]});
   document.querySelectorAll('.lang').forEach(b=>b.classList.toggle('active',b.dataset.lang===lang));
+  const servicePaths={civil:'civil-law',admin:'administrative-law',criminal:'criminal-law'};
+  document.querySelectorAll('.service-link').forEach(a=>{a.href=`/${lang}/${servicePaths[a.dataset.service]}/`});
   const seo={
     ka:{title:'ლევანი ხელხელაური — ადვოკატი თბილისში',desc:'ლევანი ხელხელაური — იურიდიული დახმარება სამოქალაქო, ადმინისტრაციულ და სისხლის სამართლის საკითხებზე თბილისში.'},
     ru:{title:'Левани Хелхелаури — адвокат в Тбилиси',desc:'Юридическая помощь в Тбилиси по гражданским, административным и уголовно-правовым вопросам. Консультации на грузинском и русском языках.'},

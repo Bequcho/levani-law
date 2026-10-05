@@ -1,0 +1,13 @@
+LEVANILAW.GE SEO UPDATE
+
+Added:
+- /ka/, /ru/, /en/ language landing pages
+- civil-law, administrative-law and criminal-law pages in all 3 languages
+- self-canonical URLs and hreflang alternates
+- unique title/meta description per page
+- internal links and local Tbilisi content
+- LegalService structured data
+- updated sitemap.xml and robots.txt
+
+Upload all files/folders from this package to the repository root, replacing existing files where prompted.
+After GitHub Pages redeploys, submit https://levanilaw.ge/sitemap.xml again in Google Search Console and Yandex Webmaster.
